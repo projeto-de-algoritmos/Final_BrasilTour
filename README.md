@@ -1,45 +1,53 @@
-**!! Atenção: Renomeie o seu repositório para (Tema)_(NomeDoProjeto). !!** 
+# Brasil Tour
 
-Temas:
- - Grafos1
- - Grafos2
- - PD
- - D&C
- - Greed
- - Final 
- 
- **!! *Não coloque os nomes dos alunos no título do repositório*. Exemplo de título correto: Grafos2_Labirinto-do-Minotauro !!**
- 
- (Apague essa seção)
+![logo.jpeg](assets/logo.jpeg)
 
-# NomedoProjeto
-
-**Número da Lista**: X<br>
-**Conteúdo da Disciplina**: XXXXXXXXXX<br>
+**Número da Lista**: 30<br>
+**Conteúdo da Disciplina**: Final<br>
 
 ## Alunos
+
 |Matrícula | Aluno |
 | -- | -- |
-| xx/xxxxxx  |  xxxx xxxx xxxxx |
-| xx/xxxxxx  |  xxxx xxxx xxxxx |
+| 18/0127641  | Matheus Afonso de Souza |
+| 18/0138545  | Thiago Mesquita Peres Nunes de Carvalho |
 
-## Sobre 
-Descreva os objetivos do seu projeto e como ele funciona. 
+## Sobre
+
+Utilize o Brasil Tour para descobrir de maneira performatica e extremamente divertida qual o caminho ideal para o seu destino.
+
+## Apresentação
+A apresentação do projeto está presente no repositório.
 
 ## Screenshots
-Adicione 3 ou mais screenshots do projeto em funcionamento.
 
-## Instalação 
-**Linguagem**: xxxxxx<br>
-**Framework**: (caso exista)<br>
-Descreva os pré-requisitos para rodar o seu projeto e os comandos necessários.
+![home.jpeg](assets/home.jpeg)
 
-## Uso 
-Explique como usar seu projeto caso haja algum passo a passo após o comando de execução.
+## Instalação
 
-## Outros 
-Quaisquer outras informações sobre seu projeto podem ser descritas abaixo.
+**Linguagem**: 
 
+- Backend:
+    - Python, utilizando FastAPI para setup do servidor e disponibilização dos endpoints HTTP.
+    - Docker e Docker Compose para realiza conteinerização do ambiente de desenvolvimento e, assim, evitar erros relacionados a ambiente.
+- Frontend:
+    - Javascript, utilizando ReactJS como framework para montar a interface visual da aplicação.
+    - Comunicação com o backend utilizando axios.
+    - Disponibilização de mapa e linhas de viagem com Leaflet.
 
+Para executar o projeto, você precisa ter o node.js, Docker e Docker Compose instalados. Caso já possua os pré-requisitos, utilize os seguintes comandos abaixo:
 
+```jsx
+# Para subir o backend
+docker-compose up --build
 
+# Para subir o frontend
+npm install
+npm start
+```
+
+## Uso
+
+Para descobrir qual a rota da sua viagem, selecione nos dois inputs na página a origem e o destino da viagem, você pode encontrar o código do aeroporto clicando no círculo azul no mapa (irá abrir um popup com o código do aeroporto)
+
+Caso ocorra um erro, será apresentado um aviso de erro, caso contrário o caminho mais rápido irá aparecer em vermelho :)
