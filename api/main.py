@@ -2,7 +2,7 @@ from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from src.graph import Graph
 from src.utils import read_csv
-from src.schemas import Path
+from src.schemas import Path, Profit
 
 app = FastAPI()
 
@@ -52,3 +52,18 @@ async def find_path(path: Path):
     if not path:
         raise HTTPException(status_code=404, detail="Esse caminho não foi possível")
     return dict(airports=path)
+
+@app.post("/profit")
+async def find_path(profit: Profit):
+    edges = read_csv(
+        path="./data/routes.csv",
+        cols=["source", "destination", "distance"]
+    )
+    graph = Graph(edges=edges)
+    graph.init_graph()
+    return graph.knapSack(
+        max_weight=profit.max_weight,
+        weights=profit.weights,
+        values=profit.values,
+        values_len=len(profit.values)
+    )
