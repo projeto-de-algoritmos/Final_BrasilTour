@@ -14,7 +14,7 @@
 
 ## Sobre
 
-Utilize o Brasil Tour para descobrir de maneira performatica e extremamente divertida qual o caminho ideal para o seu destino.
+Utilize o Brasil Tour para descobrir de maneira performatica e extremamente divertida qual o caminho ideal para o seu destino. Além de descobrir qual o maior lucro que você pode ter transportando diversas cargas!
 
 ## Apresentação
 A apresentação do projeto está presente no repositório.
@@ -48,6 +48,6 @@ npm start
 
 ## Uso
 
-Para descobrir qual a rota da sua viagem, selecione nos dois inputs na página a origem e o destino da viagem, você pode encontrar o código do aeroporto clicando no círculo azul no mapa (irá abrir um popup com o código do aeroporto)
+Para descobrir qual a rota da sua viagem, selecione nos dois inputs na página a origem e o destino da viagem, você pode encontrar o código do aeroporto clicando no círculo azul no mapa (irá abrir um popup com o código do aeroporto), você também pode definir um peso máximo de carga que o avião suporta e listar diversos items com peso e valor, assim sendo possível qual valor máximo de lucro considerando o peso limite de carga do avião.
 
 Caso ocorra um erro, será apresentado um aviso de erro, caso contrário o caminho mais rápido irá aparecer em vermelho :)
