@@ -1,11 +1,23 @@
-import { Box, Flex, Image, Select, Button } from "@chakra-ui/react";
+import { 
+  Box, 
+  Flex, 
+  Image, 
+  Select, 
+  Button, 
+  Input
+} from "@chakra-ui/react";
 import logo from "../../assets/logo.jpeg"
 
 export default function Drawer({
   handleDestinationChange,
   handleSourceChange,
   handleSubmit,
-  airports
+  handleAddItem,
+  airports,
+  handleItemValueChange,
+  handleItemNameChange,
+  handleItemWeightChange,
+  handleBaggageWeightChange
 }) {
   return (
     <Flex
@@ -50,12 +62,49 @@ export default function Drawer({
                 <option key={index} value={airport}>{airport}</option>
               ))}
             </Select>
+            <Input 
+              placeholder="Peso máximo de bagagem" 
+              marginTop="40px"
+              marginBottom="40px"
+              onChange={handleBaggageWeightChange}
+            />
             <Button
               colorScheme="blue"
               isFullWidth
               type="submit"
             >
-              Button
+              Pesquisar
+            </Button>
+          </Flex>
+        </form>
+        <form onSubmit={handleAddItem}>
+          <Flex
+            direction="column"
+            align="center"
+            width="100%"
+          >
+            <Input 
+              placeholder="Nome do item" 
+              marginTop="40px"
+              marginBottom="40px"
+              onChange={handleItemNameChange}
+            />
+            <Input 
+              placeholder="Peso do item" 
+              marginBottom="40px"
+              onChange={handleItemWeightChange}
+            />
+            <Input 
+              placeholder="Valor do item" 
+              marginBottom="40px"
+              onChange={handleItemValueChange}
+            />
+            <Button
+              colorScheme="blue"
+              isFullWidth
+              type="submit"
+            >
+              Adicionar
             </Button>
           </Flex>
         </form>
