@@ -1,4 +1,4 @@
-,airline,airline_id,source,source_id,destination,destination_id,codeshare,stops,equipament,distance
+airline,airline_id,source,source_id,destination,destination_id,codeshare,stops,equipament,distance
 214,2Z,1729,AUX,7376,PMW,4214,,0,AT7,5
 215,2Z,1729,BRA,7373,BSB,2531,,0,AT7,29
 216,2Z,1729,BRA,7373,SSA,2621,,0,AT7,8
